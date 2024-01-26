@@ -3,6 +3,7 @@ class JSONTransform : System.Management.Automation.ArgumentTransformationAttribu
     [object] Transform([System.Management.Automation.EngineIntrinsics]$EngineIntrinsics,[object]$InputData){
         # Define a JSON schema for the batch graph request
         $batchGraphRequestSchema = @{
+            '$schema' = 'http://json-schema.org/draft-07/schema#'
             'type' = 'object'
             'properties' = @{
                 'requests' = @{
