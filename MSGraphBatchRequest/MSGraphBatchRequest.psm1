@@ -1,5 +1,5 @@
 # Dot source the class file(s)
-. "$PSScriptRoot\Classes\JSONTrasform.ps1"
+. "$PSScriptRoot\Classes\JSONTransform.ps1"
 
 # Dot source the function file(s)
 . "$PSScriptRoot\Functions\ConvertTo-MSGraphBatchRequest.ps1"
