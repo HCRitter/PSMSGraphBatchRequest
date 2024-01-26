@@ -12,12 +12,12 @@ $Calls = @(
     [PSCustomObject]@{
         id = '1'
         method = "GET"
-        url = 'users/me'
+        url = '/users/me'
     },
     [PSCustomObject]@{
         id = '2'
         method = "GET"
-        url = 'devices'
+        url = '/devices'
     }
 )
 
