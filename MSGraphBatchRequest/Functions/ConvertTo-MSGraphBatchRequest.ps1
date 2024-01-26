@@ -9,24 +9,20 @@ The ConvertTo-MSGraphBatchRequest function takes a JSON object representing a ba
 The JSON object representing the batch request.
 
 .EXAMPLE
-$batchRequest = @"
-{
-    "requests": [
-        {
-            "id": "1",
-            "method": "GET",
-            "url": "/me"
-        },
-        {
-            "id": "2",
-            "method": "GET",
-            "url": "/me/drive"
-        }
-    ]
-}
-"@
+$Calls = @(
+    [PSCustomObject]@{
+        id = '1'
+        method = "GET"
+        url = '/users/me'
+    },
+    [PSCustomObject]@{
+        id = '2'
+        method = "GET"
+        url = '/devices'
+    }
+)
 
-ConvertTo-MSGraphBatchRequest -Requests $batchRequest
+ConvertTo-MSGraphBatchRequest -Requests $Calls
 
 .OUTPUTS
 The converted Microsoft Graph batch request.
@@ -50,3 +46,4 @@ function ConvertTo-MSGraphBatchRequest {
         return $Requests
     }
 }
+
